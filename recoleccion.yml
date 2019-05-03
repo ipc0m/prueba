@@ -1,1 +1,10 @@
+---
+- name: Prueba conexion remota
+  hosts: all
+  tasks:
+  - name: Conexion a sistema remoto
+    shell: ls /tmp
+    register: result
 
+  - debug:
+      msg: "{{ result }}"
